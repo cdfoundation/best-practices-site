@@ -1,13 +1,12 @@
 ---
-title: "Contribution Guidelines"
-linkTitle: "Contribution Guidelines"
+title: "Contribution guidelines"
 weight: 10
 description: >
   How to contribute to continuous delivery best practices.
 ---
 
 {{% pageinfo %}}
-**Work-in-progress:** These guidelines are in development. Netlify is not set up yet.
+**Work-in-progress:** These guidelines are in development. Netlify is **not** set up yet.
 {{% /pageinfo %}}
 
 We use [Hugo](https://gohugo.io/) to format and generate our website, the
@@ -34,6 +33,53 @@ for adding to the Community section.
 You can also create pull requests to suggest improvements to other parts of the
 site.
 
+## Code of conduct
+
+We expect contributors to read and observe the CD Foundation
+[Code of Conduct][coc].
+
+## Writing style
+
+See the [style guide](style-guide) for writing style guidance.
+
+## Running the site locally
+
+You can use the included [Dockerfile](https://docs.docker.com/engine/reference/builder/) to run the site locally.
+
+1.  On Mac and Windows, download and install [Docker
+    Desktop](https://www.docker.com/get-started).  On Linux, install [Docker
+    engine](https://docs.docker.com/engine/install/#server) and [Docker
+    compose](https://docs.docker.com/compose/install/).
+   
+    The installation might require you to reboot your computer for the changes to
+    take effect. 
+
+1. Build the docker image:
+
+   ```bash
+   docker-compose build
+   ```
+
+1. Run the built image:
+
+   ```bash
+   docker-compose up
+   ```
+
+1. Open the address `http://localhost:1313` in your web browser to load the
+   docsy-example homepage. You can now make changes to the source files, those
+   changes will be live-reloaded in your browser.
+
+
+To clean up your system and delete the container image:
+
+1. Stop Docker Compose with **Ctrl + C**.
+
+1. Remove the produced images
+
+   ```bash
+   docker-compose rm
+   ```
 
 ## Quick start with Netlify
 
@@ -64,21 +110,6 @@ If you've just spotted something you'd like to change while using the docs, Docs
 1. If you don't already have an up to date fork of the project repo, you are prompted to get one - click **Fork this repository and propose changes** or **Update your Fork** to get an up to date version of the project to edit. The appropriate page in your fork is displayed in edit mode.
 1. Follow the rest of the [Quick start with Netlify](#quick-start-with-netlify) process above to make, preview, and propose your changes.
 
-## Previewing your changes locally
-
-If you want to run your own local Hugo server to preview your changes as you work:
-
-1. Follow the instructions in [Getting started](/docs/getting-started) to install Hugo and any other tools you need. You'll need at least **Hugo version 0.45** (we recommend using the most recent available version), and it must be the **extended** version, which supports SCSS.
-1. Fork the [Best Practices repo][bp-repo] repo into your own project, then create a local copy using `git clone`. Don’t forget to use `--recurse-submodules` or you won’t pull down some of the code you need to generate a working site.
-
-    ```
-    git clone --recurse-submodules --depth 1 https://github.com/cdfoundation/best-practices-site.git
-    ```
-
-1. Run `hugo server` in the site root directory. By default your site will be available at http://localhost:1313/. Now that you're serving your site locally, Hugo will watch for changes to the content and automatically refresh your site.
-1. Continue with the usual GitHub workflow to edit files, commit them, push the
-  changes up to your fork, and create a pull request.
-
 ## Creating an issue
 
 If you've found a problem in the best practices content, but you're not sure how
@@ -94,3 +125,4 @@ button in the top right hand corner of the page.
 
 [bp-repo]: https://github.com/cdfoundation/best-practices-site
 [issues]: https://github.com/cdfoundation/best-practices-site/issues
+[coc]: https://github.com/cdfoundation/.github/blob/7c3c8e275f16fd38c4431006b49471a582059f33/CODE_OF_CONDUCT.md

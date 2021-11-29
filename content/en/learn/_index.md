@@ -1,7 +1,7 @@
 
 ---
 title: "Continuous delivery best practices"
-linkTitle: "Best Pracices"
+linkTitle: "Learn"
 weight: 20
 menu:
   main:
@@ -26,5 +26,11 @@ If you have some familiarity with continuous delivery, but need help figuring
 out what to prioritize, read about [assessment](assess) tools to help you identify
 areas to focus on.
 
-The rest of the subsections in this guide are for 
+The rest of the subsections in this guide provide information about key areas of
+continuous delivery.
 
+Some practices depend on others, while others span the entire software
+lifecycle. For example, best practices for continuous integration depend on
+version control. Security best practices are most effective when applied across
+the entire software supply chain. Best practices also involve collaboration
+across functional teams.
