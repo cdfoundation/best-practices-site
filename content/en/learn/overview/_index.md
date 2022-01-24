@@ -1,14 +1,7 @@
 ---
-title: "Improving software delivery"
-linkTitle: "Improving software delivery"
+title: "Where to Start?"
+linkTitle: "Where to Start?"
 weight: 1
 description: >
-  Learn about the benefits of continuous delivery best practices
+  An introduction to Continuous Delivery
 ---
-
-WIP - Add info here on big picture.
-
-- Importance of cross-functional collaboration
-- Improvements in speed, quality, reliability, security, etc.
-- Requires cultural support (psychological safety, ok to fail, etc.)
-- Reference research (e.g. DORA)

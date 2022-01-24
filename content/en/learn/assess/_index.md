@@ -3,7 +3,7 @@ categories: ["Assess", "Learn"]
 tags: ["assess","learn"] 
 title: "Assess your current state"
 linkTitle: "Assess your current state"
-weight: 2
+weight: 90
 description: >
   Assess the maturity of your continuous delivery in your organization.
 ---
