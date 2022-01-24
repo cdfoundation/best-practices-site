@@ -2,6 +2,7 @@
 title: "AI & Machine Learning"
 linkTitle: "AI & Machine Learning"
 weight: 100
+author: Terry Cox
 description: >-
      MLOps: Models are assets too
 ---

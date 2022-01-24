@@ -2,6 +2,7 @@
 title: "Understanding the Problem"
 linkTitle: "Understanding the Problem"
 weight: 1
+author: Terry Cox
 description: >
   Learn about the fundamental challenges that Continuous Delivery addresses
 ---

@@ -2,6 +2,7 @@
 title: "Common mistakes"
 linkTitle: "Common mistakes"
 weight: 10
+author: Terry Cox
 description: >-
      "How to be really good at Continuous Delivery AND completely destroy your company"
 ---
@@ -15,7 +16,11 @@ Then, there will be a reality adjustment. Your customers still aren’t happy. N
 
 Here’s the error: Features are outputs. **For Continuous Delivery to work as intended, your metrics must be based upon Outcomes, not Outputs.**
 
-> The benefits of Continuous Delivery are not derived from the optimization of the engineering process within your organization. The purpose of Continuous Delivery is to optimize the delivery of those outcomes that are most important to your customers.
+{{% blocks/section color="orange" height="auto" %}}
+<span style="font-size:larger; padding:10px;" >The benefits of Continuous Delivery are **not** derived from the optimization of the engineering process within your organization. The purpose of Continuous Delivery is to optimize the delivery of those outcomes that are most important to your customers.</span>
+{{% /blocks/section %}}
+
+<br>
 
 The bulk of the technical details of Continuous Delivery implementation can appear to sit within the engineering function and DevOps transformations are often driven from that team, but Continuous Delivery will only work for your organization if it is adopted as a core component of a product commercialization strategy that aligns all activities across shareholders, management, marketing, sales, engineering and operations.
 

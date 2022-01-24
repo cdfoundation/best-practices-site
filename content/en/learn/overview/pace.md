@@ -2,6 +2,7 @@
 title: "Going slower to go faster"
 linkTitle: "Going slower to go faster"
 weight: 20
+author: Terry Cox
 description: >-
      Understanding what makes the most difference when optimizing for success
 ---
