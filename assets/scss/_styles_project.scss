@@ -1,0 +1,42 @@
+// Override theme styles here
+
+//
+// Style Markdown content
+//
+
+.td-content {
+
+    > blockquote {
+        position: relative;
+        background: linear-gradient(to bottom, $blockquote-gradient-color-1 20%, $blockquote-gradient-color-2 100%);
+        border-color: $blockquote-border-color;
+        border-style: solid;
+        border-width: 3px;
+        color: $blockquote-text-color;
+        font-size: 120%;
+        filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(163, 163, 163, 0.7));
+        text-align: left;
+        width: 80%;
+        border-radius: 6px 0px 6px 0px;
+        padding-top: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2.2rem; 
+    }
+    > blockquote:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-width: 1.1rem 0.4rem 0 0;
+        border-color: $blockquote-border-color transparent transparent transparent;
+        bottom: -1.2rem;
+        left: 2%;
+        margin-left: -0.4rem;
+    }
+
+}

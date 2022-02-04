@@ -1,0 +1,37 @@
+---
+title: "AI & Machine Learning"
+linkTitle: "AI & Machine Learning"
+weight: 100
+author: Terry Cox
+description: >-
+     MLOps: Models are assets too
+---
+Many products include machine learning as a technology component and the process of managing machine learning in production is usually referred to as MLOps, however there are wildly differing views as to what this means in practice in this nascent field.
+
+A common misunderstanding is to treat machine learning as an independent and isolated discipline with tools optimized purely for the convenience of data science teams delivering stand-alone models. This is problematic because it takes us back to development patterns from the pre-DevOps era, where teams work in isolation, with a partial view of the problem space, and throw assets over the fence to other teams, downstream, to deploy and own.
+
+In reality, the machine learning component of a product represents around 5-10% of the effort required to take that product to market, scale and maintain it across its lifespan. What is important is managing the product as a whole, not the models or any other specific class of technology included within the product. MLOps should therefore be seen as the practice of integrating data science capabilities into your DevOps approach and enabling machine learning assets to be managed in exactly the same way as the rest of the assets that make up your product.
+
+This implies extending the ‘machine that builds your product’ to enable it to build your machine learning assets at the same time. This turns out to have significant advantages over the manual approach common in data science teams.
+
+Firstly, your data science assets must be versioned. This includes relatively familiar components like training scripts and trained models, but requires that you also extend your versioning capability to reference explicit versions of training and test data sets, which otherwise tend to get treated as ephemeral buckets of operational data that never have the same state twice.
+
+Your training process should be automated, from training scripts that are themselves managed assets that include automated acceptance tests. Keep in mind the idea that the models that you are producing are not optimal blocks of code that can be debugged, but are rather approximations to a desired outcome that may be considered fit for purpose if they meet a set of predefined criteria for their loss function. Useful models are therefore discovered through training, rather than crafted through introspection and the quality of your models will represent a trade-off between the data available for training, the techniques applied, the tuning undertaken to hyper-parameters and the resources available for continued training to discover better model instances.
+
+Many of these factors may be optimized through automation as part of your build system. If your build system creates the infrastructure necessary to execute a training run dynamically, on the fly, and evaluates the quality of the resultant model, you can expand your search space and tune your hyper-parameters by executing multiple trainings in parallel and selecting from the pool of models created.
+
+A big part of successfully managing machine learning assets lies in having the ability to optimize your utilization of expensive processing hardware resources, both during training and operational inferencing. Manually managing clusters of VMs with GPU or TPU resources attached rapidly becomes untenable, meaning that you can accrue large costs for tying up expensive resources that aren’t actually being utilized for productive work. Your build system needs to be able to allocate resources to jobs in a predictable fashion, constraining your maximum spend against defined budgets, warning of excessive usage and enabling you to prioritize certain tasks over others where resources are constrained in availability.
+
+It is important to be aware that beyond trivial examples that can be run in memory on a single computing device, much of machine learning sits in the domain of complex, high-performance, distributed computing. The challenge is to decompose a problem such that petabytes of training data can be usefully sharded into small enough chunks to be usefully processed by hardware with only gigabytes of RAM, distributed into parallel operations that are independent enough to significantly reduce the elapsed time of a training. Moving that much data across thousands of processing nodes in a way that ensures that the right data is on the right node at the optimal time is a conceptual problem that humans are poorly suited to optimizing and the cost of errors can be easily multiplied by orders of magnitude.
+
+Consideration should be given to the forward and reverse paths in this product lifecycle. Your build process should seek to optimize the training and deployment of versioned models into production environments, but also to enable a clear audit trail, so that for any given model in production, it is possible to follow its journey in reverse so that the impact of incidents in production can be mitigated at minimal cost.
+
+On the forward cycle, there are additional requirements for testing machine learning assets, which should be automated as far as possible. Models are typically decision-making systems that must be subject to bias detection and fairness validation, with specific ethics checks to ensure that the behavior of the model conforms to corporate values.
+
+In some cases, it will be a legal requirement that the model is provable or explainable, such that a retrospective investigation could understand why the model made a given decision. In these cases, it should be expected that the evolutionary lifecycle of the model will include the need to be able to back-track through the training process from an incident in production, triggering retraining and regression testing to ensure that mistakes are corrected in subsequent releases.
+
+Models also require security and privacy evaluation prior to release. This should take the form of adversarial testing where the model is subjected to manipulated input data with the intent of forcing a predictable decision or revealing personally identifiable training data in the output. Note that there is always a trade-off between explainability and privacy in machine learning applications, so this class of testing is extremely important.
+
+The build system must be able to appropriately manage the synchronization of release of models and the conventional services that consume them, in production. There is always a problem of coupling between model instances and the services that host and consume inference operations. It should be expected that multiple versions of a given model may be deployed in parallel, in production, so all associated services must be versioned and managed appropriately.
+
+Note that in some geographic regions, it is possible for customers to withdraw the right to use data that may comprise part of the training set for production models. This can trigger the need to flush this data from your training set, and to retrain and redeploy any models that have previously consumed this data. If you cannot do this automatically, there is a risk that this may be used as a denial of service attack vector upon your business, forcing you into cycles of expensive manual retraining and redeployment or exposing you to litigation for violations of privacy legislation.

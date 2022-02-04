@@ -1,7 +1,7 @@
 ---
 title: "Domain-specific practices"
 linkTitle: "Domain-specific practices"
-weight: 10
+weight: 100
 description: >
   Practices specific to a domain or industry.
 ---
