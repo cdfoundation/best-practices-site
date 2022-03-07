@@ -7,6 +7,9 @@ description: >
   Learn about the fundamental challenges that Continuous Delivery addresses
 ---
 
+{{% youtube RC5Ai0buX3Y %}}
+
+<br>
 Software development at scale is an activity within the broader context of Product Commercialization. 
 *Our goal is not to build software, but to build a product that leverages software or machine learning to solve the problem that the product addresses.*
 
