@@ -54,14 +54,14 @@ Compile by Tag - a Tag has been applied to all objects in the repository and the
 ## Compile/Link Best Practices
 The creation of build scripts and how they are managed can often be controversial. Writing a build script is not easy in large monolithic practices. Whether it be a build script for Java or more complex C++ code, it is a tedious and time consuming process. There are some basic guidelines that should be followed for creating the build scripts that the CI process will run.
 
-###Build Work Products
+### Build Work Products
 Regardless of what type of build is executing, it should produce 3 basic outputs.
 1. A build should create not only the binaries, but also the application package named based on a version numbering schema that relates back to the versioning Tag. (MSI, zip, rpm, or container image)
 2. A full Bill of Material report should be required at minimum for all production releases. BOM reports are often undervalued, but they are key to debugging issues if needed. A BOM report should show:
-- All source code included in the build.
-- All libraries or packages, internal and external used in the link.
-- All compile/link parameters used to define the binaires.
-- Licensing of external components and transitive dependencies. 
+    - All source code included in the build.
+    - All libraries or packages, internal and external used in the link.
+    - All compile/link parameters used to define the binaires.
+    - Licensing of external components and transitive dependencies. 
 3. Every build should include a Difference report. A Difference report shows what changed between any two builds. This should be used for approving updates before a release to testing or production environments. A Difference report should be generated based on a comparison of two BOM reports. Difference reports can be pulled from the version repository, but may be incomplete as objects such as third party libraries are not pulled from a version repository. 
 ## Do not use wildcard includes (/*.*)
 When defining where code, packages and libraries are to be found in the build process, do not use wildcard includes. Instead list all file references by name that need to be compiled or linked into the binary objects. While this may seem a lot of extra work, it is essential in securing that only approved objects end up in the resulting binary. If you use the wildcard includes, non-approved objects will no doubt be delivered with your binary. This can be a hidden security risk. This also means your binary includes unnecessary objects which can substantially increase the size of your binary. 
