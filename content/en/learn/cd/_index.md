@@ -8,22 +8,23 @@ description: >
 ---
 
 
-- [Why Continuous Deployments](#heading-wcd)
+- [Why Continuous Delivery](#heading-wcd)
 - [Definition](#heading-def)
 - [Description and Scope](#heading-das)
 - [Best practices](#heading-bp)
 
 
-# Why Continuous Deployments {#heading-wcd}
-Continuous Integration drove the need for continuous deployments. Continuous deployment is the process of updating an endpoint with a new release candidate pushed by the Continuous Delivery orchestration engine. Once developers automated the creation of binaries, triggered by a coding update, they also wanted to deploy the update and run automated testing, but first the update needed to be deployed. Automating the deployment of objects became a natural next step from automating the builds. 
+# Why Continuous Delivery {#heading-wcd}
+Continuous Integration drove the need for continuous delivery. Continuous delivery is the process of updating an endpoint with a new release candidate pushed by the Continuous Delivery orchestration engine. Once developers automated the creation of binaries, triggered by a coding update, they also wanted to deploy the update and run automated testing, but first the update needed to be deployed. Automating the deployment of objects became a natural next step from automating the builds. 
 
 As developers and testing teams became more efficient at providing release candidates, production teams were being asked to move the new updates forward to the end users. However, the production teams had different deployment requirements and often used ‘operation’ tooling to perform releases. The scripts that drove deployments for development and testing were not accepted by the teams managing the production environments. This began a culture shift. We began to see the rise in “Site Reliability” engineering, individuals who work at an operational level but assigned to development teams. This began a conversation about automating the continuous deployment step of the DevOps pipeline and shifted the conversation from continuous integration to solving a repeatable continuous deployment step integrated into the continuous delivery orchestration. To support what the operational side of the house needed it became apparent that automated tooling, specific to deployments, was required. In particular, solutions to serve the auditability and change management of production endpoints was required to build a DevOps pipeline that truly served the needs of both sides of the equation. The deployment automation category was born. 
 
 # Definition {#heading-def}
-Continuous Deployment is an approach where working software is released to users automatically on every commit. The process is repeatable and auditable.
+Continuous Delivery is an approach where working software users safely, quickly and sustainably by proving that changes can be released at any time
+through an release processes
 
 # Description and Scope {#heading-das}
-Continuous Deployment is a practice that focuses on the release of binaries to endpoints. The need to automate deployments grew out of the continuous integration movement. Developers automated deployments from their CI workflows using a simple deployment script to update their development environments for unit testing. Initially the scripts were just a copy command. As the industry evolved, the need to recycle web servers and tweak environment configurations were added to the scripts. The deployment step began to become more and more complicated and critical. Testing teams became more dependent on developers to perform testing releases. In many ways, this need evolved a simple CI workflow into a Continuous Delivery workflow, automating the update to testing upon a successful unit test in development. Now one workflow called another workflow and we began the journey into continuous delivery. 
+Continuous Deployment is the functional implementation of continuous delivery where working software is released to users on every commit. The need to automate deployments grew out of the continuous integration movement. Developers automated deployments from their CI workflows using a simple deployment script to update their development environments for unit testing. Initially the scripts were just a copy command. As the industry evolved, the need to recycle web servers and tweak environment configurations were added to the scripts. The deployment step began to become more and more complicated and critical. Testing teams became more dependent on developers to perform testing releases. In many ways, this need evolved a simple CI workflow into a Continuous Delivery workflow, automating the update to testing upon a successful unit test in development. Now one workflow called another workflow and we began the journey into continuous delivery. 
 
 Once the unit testing was complete, the need to push the update to testing and production drove the evolution of automating deployments to include broader management of the deployment process with the goal of deployment repeatability across all stages. While continuous deployments had been embraced by developers and testers, production teams were not willing to accept updates on a high frequency basis. Operation teams, with the goal of maintaining a stable production environment, have a culture of being risk averse. In addition, the deployment needs of production are consistently different from the needs of development and testing. Creating a single platform for managing deployments across the lifecycle pipeline became the goal of the continuous deployment movement. 
 
