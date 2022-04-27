@@ -1,0 +1,24 @@
+
+---
+title: "Licensing"
+linkTitle: "Licensing"
+weight: 1
+description: >
+  Best practices for managing intellectual property in the software supply chain.
+---
+
+Software is a form of intellectual property and, in most jurisdictions, the creator of a piece of software is granted various legal rights with respect to the use and replication of this software by others. Typically, the assertion of these rights will be communicated by issuing a software license to consumers of this product.
+
+Any individual or organization violating the terms of a license may be liable to prosecution, hence it is critically important to understand, for every dependency in your solution, that you have the right to legally use that component for the purposes that you intend.
+
+In the case of commercial software, you are required to pay for a license, the price of which may be linked to the number of intended users, the number of instances, or the number of CPUs used to execute it. This payment may be a one-off fee, a recurring charge, or relative to usage. This implies the need to regularly confirm that licenses are still valid.
+
+In the case of Free, Open Source software, the creator has chosen to grant a license without asking a fee. This does not mean that they are not asserting their rights, however, and it is normal for this class of software to come with attached and very specific constraints upon the type of use which is permissible. Again, you must be sure that you have permission to use all of your inherited dependencies in the way that you intend for your product. Some licenses contain 'copyleft' restrictions that are viral in nature. These generally grant permission to use, modify and redistribute a component, but only upon the condition that any derived works inherit the same conditions, and/or contribute the source for their modifications back to the community. Again, it is critical to understand the terms granted by every dependency, since you may be inheriting a legal obligation that conflicts with your intended usage or commercial model.
+
+Some software falls into the class of Public Domain, where the creator has waived, or lost, all their rights, and this software may be used freely without consequence. It is not, however, safe to assume that software distributed without a license is in the public domain.
+
+To manage this challenge safely, it is necessary to maintain a Software Bill of Materials (SBOM) that lists all of the components that make up your product, including all inherited dependencies. For each line item in this SBOM, it is essential to identify the type of license involved, the nature of the terms of this license, and any proof of transaction for commercial products. Whilst it is possible to do this by hand, it is an extremely manually intensive operation that a legal team will usually insist upon prior to every deployment. As such, it is really only viable to use automated scanning as part of your build pipeline. SBOM components that contain machine-readable licenses greatly simplify this process as the alternative is brute-force text scanning to try to identify licenses within each component and parse the license for sensitive terms. This can be expected to result in multiple false positives and negatives, so a necessary approach is to utilize a component library service that maintains a history of component-library relationships that can be manually maintained at an organization-wide level to mitigate the effort involved in tracking this information. This also facilitates the use of policy-based rules for license management.
+
+Now let's look at the downstream implications. Your product will need to present a license to your customers (and that license may need to inherit clauses from your dependencies). You should provide with your software an easily understood description of the license, the full legal statement of the detail of the license and a machine-readable version of the license such as those maintained by the OSI or Creative Commons. You should also publish the SBOM for your product where your license permits, to simplify recursive dependency management.
+
+If your product is commercial in nature, you will find that licensing can be a costly and resource-intensive overhead. A key element for start-ups in particular is to do as much as possible to automate the on-boarding process for your product, so that your customers can easily integrate your product into their process without manual intervention on your part. This applies equally to paid software modules, or Software-as-a-Service offerings. Simplifying your sales process into something that aligns with your customer's build pipelines will increase conversion rate and stickiness to an extent that can outweigh a more aggressive, tiered pricing approach requiring a dedicated sales team.
