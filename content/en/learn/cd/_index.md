@@ -8,14 +8,14 @@ description: >
 ---
 
 
-- [Why Continuous Delivery](#heading-wcd)
+- [Continuous Delivery and Deployement](#heading-cdd)
 - [Definition](#heading-def)
 - [Description and Scope](#heading-das)
 - [Best practices](#heading-bp)
 
 
-# Why Continuous Deployments {#heading-wcd}
-Continuous Integration drove the need for continuous deployments. Continuous deployment is the process of updating an endpoint with a new release candidate pushed by the Continuous Delivery orchestration engine. Once developers automated the creation of binaries, triggered by a coding update, they also wanted to deploy the update and run automated testing, but first the update needed to be deployed. Automating the deployment of objects became a natural next step from automating the builds. 
+# Continuous Delivery and Deployment {#heading-cdd}
+Continuous Integration ensures that the commits to a code base are validated in an automated way.  This led to the concept of Continuous Delivery, where the build output is published as an artifact (or set of artifacts) that are able to be deployed via a manual process. Continuous deployment takes that even further to say those artifacts can be *automatically* deployed because of the attestation the software pipeline ensures about correctness. Put another way, once developers have automated the creation and validation of build artifacts any time code is updated, the logical extension is to automate the deployment of those updates as well.
 
 As developers and testing teams became more efficient at providing release candidates, production teams were being asked to move the new updates forward to the end users. However, the production teams had different deployment requirements and often used ‘operation’ tooling to perform releases. The scripts that drove deployments for development and testing were not accepted by the teams managing the production environments. This began a culture shift. We began to see the rise in “Site Reliability” engineering, individuals who work at an operational level but assigned to development teams. This began a conversation about automating the continuous deployment step of the DevOps pipeline and shifted the conversation from continuous integration to solving a repeatable continuous deployment step integrated into the continuous delivery orchestration. To support what the operational side of the house needed it became apparent that automated tooling, specific to deployments, was required. In particular, solutions to serve the auditability and change management of production endpoints was required to build a DevOps pipeline that truly served the needs of both sides of the equation. The deployment automation category was born. 
 

@@ -36,22 +36,18 @@ Microservices adds a new layer of configuration challenges. Because each are sma
 
 Lessons from the past instruct us to begin automating the configuration management and change tracking of the full IT stack. Adding automated configuration management into the CD pipeline will become increasingly important as companies decompose applications into hundreds of independent functions running across dozens of clusters. 
 
-# Best Practices {#heding-bp}
+# Best Practices {#heading-bp}
 ## Dependency Management
 Core to configuration management is understanding the relationships between objects. The ability to easily see relationships between artifacts, objects and environments is essential. Dependency management enables the view of the relationships from an artifact to a version of an application, from application version to the artifacts that compose it and from an environment to the application versions that run in the environment. 
 ## Library Management
-Included in your software build process or container image build is the need for defining transitive dependencies. This step is needed to identify vulnerabilities, licenses usage and policy conformance in open source libraries in which your software depends.  
+Included in your software build process or container image build is the need for defining transitive dependencies. This step is needed to identify vulnerabilities, licenses usage and policy conformance in open source libraries on which your software depends.  
 ## Impact Analysis
-Understanding the impact a single source code change has on the consuming applications is critical in understanding the risk level of an update. In a cloud native environment the impact of a microservice update is only exposed at run-time. The ability to view the impact, or blast radius, prior to a release will minimize the runtime incidents in both a monolithic or microservice architecture. In addition, when changing the infrastructure, a clear understanding of the potential risk of an update is needed. 
+Understanding the impact a single source code change has on the consuming applications is critical in understanding the risk level of an update. In a cloud native environment, the impact of a microservice update is only exposed at run-time. The ability to view the impact or blast radius prior to a release will minimize the runtime incidents in both monolithic and microservice architectures. In addition, when changing the infrastructure, a clear understanding of the potential risk of an update is needed. 
 ## Variables Management
 Variables relate to how the binaries, containers and runtime environments are configured. Whether you are running in a traditional server based environment or cloud native environment, environment variables need to be managed. The same artifact or application can execute differently depending on these variables. Key value pairs and configuration maps should be versioned based on the environment. This data should be stored in a central location such as a catalog or configuration server. Comparison of key values between environments is needed for debugging purposes. 
 ## Centralized Configuration Data
 Configuration data should be stored and managed in a central location. Querying the centralized configuration metadata provides critical insights into what has occurred, or what may occur supporting the analysis of impacts and exposing potential problems before an update. As we develop machine learning, a centralized data store has the potential to predict the risk of a change.
 ## Configuration Reports
 Configuration reporting should include comparison reports, relationship reports and configuration changes with an audit log. The audit log should show details such as when, why, what and who drove the changes over time. Difference or ‘comparison’ reports are needed to expose precisely what was updated and how two environments differ or two application versions differ. The difference detail is essential in maintaining site reliability and minimizing incidents. 
-## Domain Driven Design (DDD) and SOA
-While not apparent, there are particular configuration requirements for a Service Oriented Architecture (SOA) that can significantly simplify the change management process. Minimizing the sprawl of services across environments can reduce complexities in tracking changes and improve overall reuse of services. DDD has been a method for defining an SOA and is critical for organizing reusable services. DDD should be incorporated into the configuration management strategy to reduce redundancy and improve quality. 
-
- 
-
-
+## Domain Driven Design (DDD) and Service-oriented Architecture (SOA)
+While not apparent, there are particular configuration requirements for a Service Oriented Architecture (SOA) that can significantly simplify the change management process. Minimizing the sprawl of services across environments can reduce complexities in tracking changes and improve overall reuse of services. Domain Drive Design (DDD) has been a method for defining an SOA and is critical for organizing reusable services. DDD should be incorporated into the configuration management strategy to reduce redundancy and improve quality. 
