@@ -20,9 +20,9 @@ If these manual tasks fall inside an inner loop of our iterative build and relea
 
 The benefits of this are easy enough for individuals to visualize. The next problem, however, is more subtle and more impactful.
 
-As we have discussed previously, working with ‘invisible’ artifacts like software systems means that teams have to manage the problem of communicating what is needed, what is being done and what technical debt remains. On a team of ‘n’ people, the number of possible communication paths goes up with n2-n and this exponential scaling factor can rapidly wipe out all productivity.
+As we have discussed previously, working with ‘invisible’ artifacts like software systems means that teams have to manage the problem of communicating what is needed, what is being done and what technical debt remains. On a team of ‘n’ people, the number of possible communication paths goes up with n<sup>2</sup>-n and this exponential scaling factor can rapidly wipe out all productivity.
 
-Similarly, if everyone on the team takes a unique approach to solving any given problem, the amount of effort required for the team to understand how something works and how to modify it also goes up with n2.
+Similarly, if everyone on the team takes a unique approach to solving any given problem, the amount of effort required for the team to understand how something works and how to modify it also goes up with n<sup>2</sup>.
 
 As your product grows, numbers of customers and volumes of transactions also scale exponentially.
 
