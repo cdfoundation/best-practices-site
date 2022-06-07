@@ -27,8 +27,8 @@ Practically speaking, without the use of version control any kind of legitimate 
 
 # Types of Version Control
 
-There are two primary types of version control, though only two that are truly appropriate for production software.
+There are numerous types of version control, though only two that are truly appropriate for production software.
 
-- <b>Centralized System:</b> All files are managed by a single service, including any history of changes, and the service tracks status of in-progress efforts. Access management lists of contributors is also controlled by the service.  Examples of centralized version control systems include Subversion or Perforce.
+- <b>Centralized System:</b> All files are managed by a single service, including any history of changes, and the service tracks status of in-progress efforts. Access management lists of contributors are also controlled by the service.  Examples of centralized version control systems include Subversion or Perforce.
 
 - <b>Distributed System:</b> While there is usually a primary version of a given project, development against that project is done by making a complete copy, or clone, of the whole project into a new environment.  This includes the full history of changes up to that point.  Each copy, or clone, of a project can also maintain it's own list of contributors indepently.  Examples of distributed version control systems include Mercurial and Git.
