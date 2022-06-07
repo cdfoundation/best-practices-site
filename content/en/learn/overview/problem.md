@@ -11,7 +11,8 @@ description: >
 
 <br>
 Software development at scale is an activity within the broader context of Product Commercialization. 
-*Our goal is not to build software, but to build a product that leverages software or machine learning to solve the problem that the product addresses.*
+
+> Our goal is not to build software, but to build a product that leverages software or machine learning to solve the problem that the product addresses.
 
 The problems of product commercialization drive the approach that we use to optimize software delivery. Let’s start by understanding these problems.
 
