@@ -8,15 +8,16 @@ menu:
 layout: docs
 ---
 
-{{% blocks/cover title="Resources" height="min" %}}
-
+{{% blocks/lead title="Resources" height="auto" %}}
+\
 Deepen your knowledge of continuous delivery best practices with these
 resources.
 
-{{% /blocks/cover %}}
+.
 
+{{% /blocks/lead %}}
+\
 {{% blocks/section type="section" color="white" %}}
-
 ## Best practices
 
 - DORA, SLSA
