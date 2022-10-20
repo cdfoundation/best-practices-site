@@ -23,6 +23,9 @@ resources.
 - DORA, SLSA
 - Books and other resources
 
+## Terminology and vocabularies
+
+- [Tools Terminology](./tools-terminology)
 
 ## Industry-specific resources
 
