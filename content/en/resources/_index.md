@@ -16,6 +16,8 @@ resources.
 .
 
 {{% /blocks/lead %}}
+
+\
 \
 {{% blocks/section type="section" color="white" %}}
 ## Best practices
@@ -26,6 +28,7 @@ resources.
 ## Terminology and vocabularies
 
 - [Tools Terminology](./tools-terminology)
+- [CDEvents](./cdevents)
 
 ## Industry-specific resources
 
