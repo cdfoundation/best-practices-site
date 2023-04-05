@@ -5,10 +5,6 @@ description: >
   How to contribute to continuous delivery best practices.
 ---
 
-{{% pageinfo %}}
-**Work-in-progress:** These guidelines are in development. Netlify is **not** set up yet.
-{{% /pageinfo %}}
-
 We use [Hugo](https://gohugo.io/) to format and generate our website, the
 [Docsy](https://github.com/google/docsy) theme for styling and site structure, 
 and [Netlify](https://www.netlify.com/) to manage the deployment of the site. 
