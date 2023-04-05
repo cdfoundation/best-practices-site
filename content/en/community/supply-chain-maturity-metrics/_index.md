@@ -1,9 +1,14 @@
+---
+title: "Supply Chain Security Metrics"
+weight: 20
+description: >
+  Describing metrics used to assess software supply chain security health.
+---
 # Supply Chain Maturity Metrics
 
 * **Author:** [David Bendory (Google/Tekton)](https://github.com/bendory)
 * **Contributors:** Justin Abrahms (eBay)
 * **This public document is part of the [CDF’s Supply Chain Maturity Model workstream](https://github.com/cdfoundation/sig-software-supply-chain/blob/main/workstreams/scmm/README.md).**
-* **History:** This file was imported from the original [source doc](https://docs.google.com/open?id=1CDSbQezqauwL2BaFob7o2ztLk6dTQGZqZCMZ_szNhW8&resourcekey=0-ooiOpNu2gyR-KOlMNOCcDA).
 
 
 ## Objective
