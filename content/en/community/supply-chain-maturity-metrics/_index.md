@@ -1,5 +1,5 @@
 ---
-title: "Supply Chain Security Metrics"
+title: "Supply Chain Maturity Metrics"
 weight: 20
 description: >
   Describing metrics used to assess software supply chain security health.
