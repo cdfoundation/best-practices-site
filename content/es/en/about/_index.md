@@ -16,7 +16,7 @@ Este sitio reúne orientación y mejores prácticas para la entrega de programas
 
 {{% blocks/section type="section" color="white" %}}
 
-## The Continuous Delivery Foundation
+## La Fundación de Entrega Continua
 
 La Fundación de Entrega Continua (CDF) sirve como el hogar independiente del proveedor de muchos de los proyectos de más rápido crecimiento para la integración continua/entrega continua (CI/CD). Fomenta la colaboración independiente del proveedor entre los principales desarrolladores, usuarios finales y proveedores de la industria para promover las mejores prácticas de CI/CD y las especificaciones de la industria. Su misión es hacer crecer y sostener proyectos que forman parte del amplio y creciente ecosistema de entrega continua.
 
