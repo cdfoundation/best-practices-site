@@ -8,7 +8,7 @@ menu:
 author: Terry Cox
 ---
 
-{{% blocks/lead title="Reference Architecture" height="auto" color="blue 300" %}}
+{{% blocks/lead title="Reference Architecture" height="auto" color="blue" %}}
 \
 The CDF Reference Architecture is intended to help you get up to speed with all the fundamental concepts and challenges that you are likely to encounter within the Continuous Delivery space
 

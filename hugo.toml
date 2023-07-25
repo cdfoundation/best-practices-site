@@ -40,13 +40,6 @@ pygmentsUseClassic = false
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
 
-## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
-[blackfriday]
-plainIDAnchors = true
-hrefTargetBlank = true
-angledQuotes = false
-latexDashes = true
-
 # Image processing configuration.
 [imaging]
 resampleFilter = "CatmullRom"
@@ -59,6 +52,7 @@ anchor = "smart"
 id = "UA-00000000-0"
 
 # Language configuration
+# See also module.mounts section below
 
 [languages]
   [languages.en]
@@ -95,6 +89,17 @@ id = "UA-00000000-0"
     path = "github.com/google/docsy/dependencies"
     disable = false
 
+  # Edit the section below to merge english content into a translation if the translation is missing content.
+  # Default mount for EN
+  [[module.mounts]]
+    source = 'content/en'
+    target = 'content'
+    lang = 'en'
+  # This fills in the gaps in ES content with EN content
+  [[module.mounts]]
+    source = 'content/en'
+    target = 'content'
+    lang = 'es'
 
 [markup]
   [markup.goldmark]
