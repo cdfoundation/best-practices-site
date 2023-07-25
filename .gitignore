@@ -1,5 +1,5 @@
 node_modules/
-resources/
+/resources/
 
 # vim temporary files
 *~
@@ -11,3 +11,6 @@ resources/
 # IDE files
 .idea
 .vscode
+
+# Hugo
+.hugo_build.lock
