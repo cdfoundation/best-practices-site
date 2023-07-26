@@ -91,15 +91,15 @@ id = "UA-00000000-0"
 
   # Edit the section below to merge english content into a translation if the translation is missing content.
   # Default mount for EN
-  [[module.mounts]]
-    source = 'content/en'
-    target = 'content'
-    lang = 'en'
+  # [[module.mounts]]
+  #   source = 'content/en'
+  #   target = 'content'
+  #   lang = 'en'
   # This fills in the gaps in ES content with EN content
-  [[module.mounts]]
-    source = 'content/en'
-    target = 'content'
-    lang = 'es'
+  # [[module.mounts]]
+  #   source = 'content/en'
+  #   target = 'content'
+  #   lang = 'es'
 
 [markup]
   [markup.goldmark]
