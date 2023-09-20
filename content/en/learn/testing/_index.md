@@ -10,11 +10,9 @@ description: >
 
 
 - [Why Continuous Testing](#heading-wct)
-  - Associated DORA capabilities
 - [Definition](#heading-def)
-- Key stakeholders
-- Best practices
-- Relationship to other practices
+- [Description and Scope](#heading-das)
+- [Best Practices in Action](#heading-bp)
 
 # Why Continuous Testing {#heading-wct}
 ## Find issues fast
@@ -38,10 +36,10 @@ Getting fast feedback on the impact of changes throughout the software delivery 
 Because testing is so essential, we should be continuously performing all types of testing as an integral part of the development process.
 Not only does this help teams build (and learn how to build) high-quality software faster; DORA's research shows that it also improves software stability, reduces team burnout, and lowers deployment pain.
 
-# Description/Scope
+# Description and Scope {#heading-das}
 All types of automated testing (unit, integration, acceptance, etc) should be run against every commit to version control to give developers fast feedback on their changes. Developers should be able to run automated tests as much as possible on their workstations to triage and fix defects. Testers should be performing exploratory testing continuously against the latest builds to come out of CI stage.
 
-# Best Practices
+# Best Practices in Action {#heading-bp}
 ## Manual Testing
 Allow testers to work alongside developers throughout the software development and delivery process. Note that "tester" is a role, not necessarily a full-time job. Perform manual test activities such as exploratory testing and usability testing both as a way to validate existing automation and also identify opportunities to extend test coverage.  Many products, especially those with a complex graphical interface, will not be able to achieve 100% automated test coverage, so it's important to have strong domain expertise in testing strategies.
 
