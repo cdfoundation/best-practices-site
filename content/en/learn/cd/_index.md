@@ -11,7 +11,7 @@ description: >
 - [Continuous Delivery and Deployement](#heading-cdd)
 - [Definition](#heading-def)
 - [Description and Scope](#heading-das)
-- [Best practices](#heading-bp)
+- [Best practices in Action](#heading-bp)
 
 
 # Continuous Delivery and Deployment {#heading-cdd}
@@ -32,7 +32,7 @@ Continuous deployments can be viewed in two ways, a push process or a pull proce
 
 
 
-# Best Practices {#heading-bp}
+# Best Practices in Action {#heading-bp}
 
 ## Repeatability {#heading-repeat}
 The deployment process must be repeatable across all stages of the pipeline. To achieve repeatability, values that are specific to an environment should be separated from the deployment tasks. This allows the logic of the deployment to remain consistent, while the values change according to the endpoint. 

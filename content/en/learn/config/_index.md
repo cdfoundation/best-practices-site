@@ -9,9 +9,9 @@ description: >
 
 
 - [Why Configuration Management](#heading-wcm)
-  - Associated DORA capabilities
 - [Definition](#heading-def)
-- [Best practices](#heading-bp)
+- [Description and Scope](#heading-das)
+- [Best practices in Action](#heading-bp)
 
 # Why Configuration Management {#heading-wcm}
 Configuration Management maintains a record of the state of software and runtime environments with changes overtime. Configuration management tracks the many attributes and conditions of how software is assembled, how environments are defined, and records updates allowing systems to be consistently maintained by presenting a history of state changes.  
@@ -36,7 +36,7 @@ Microservices adds a new layer of configuration challenges. Because each are sma
 
 Lessons from the past instruct us to begin automating the configuration management and change tracking of the full IT stack. Adding automated configuration management into the CD pipeline will become increasingly important as companies decompose applications into hundreds of independent functions running across dozens of clusters. 
 
-# Best Practices {#heading-bp}
+# Best Practices in Action {#heading-bp}
 ## Dependency Management
 Core to configuration management is understanding the relationships between objects. The ability to easily see relationships between artifacts, objects and environments is essential. Dependency management enables the view of the relationships from an artifact to a version of an application, from application version to the artifacts that compose it and from an environment to the application versions that run in the environment. 
 ## Library Management

@@ -6,20 +6,18 @@ description: >
   Best practices for continuous integration
 ---
 
-- Definition
-- Why it matters
-  - Associated DORA capabilities
-- Key stakeholders
-- Best practices
-- Relationship to other practices
+- [Why Continuous Integration](#heading-wci)
+- [Definition](#heading-def)
+- [Description and Scope](#heading-das)
+- [Best Practices in Action](#heading-bp)
 
 
-# Why Continuous Integration
+# Why Continuous Integration {#heading-wci}
 
 Continuous Integration ensures that coding changes are merged, compiled/linked, packaged and registered frequently, avoiding broken builds and ensuring a clean release candidate is available continuously. 
 
 
-# Definition
+# Definition {#heading-def}
 [Continuous Integration](https://github.com/cdfoundation/glossary/blob/main/definitions.md#continuous-integration), the CI in CI/CD, is the practice of combining code changes frequently, where each change is verified on check-in.
 
 - Examples of verifications:
@@ -28,7 +26,7 @@ Continuous Integration ensures that coding changes are merged, compiled/linked, 
   - Building and packaging
 
 
-# Description and Scope
+# Description and Scope {#heading-das}
 Minimizing broken builds due to incompatible coding changes is the purpose of the continuous integration process. Historically, project teams would have a ‘sync-up’ process which generally meant check-in all of your coding updates and hope that the build runs. An unsung hero called the Build Manager created the build script which would include merging and pulling all of the coding updates based on ‘tags’ and then get the build to run. 
 
 This ‘sync-up’ step was performed once a week, every two weeks or monthly. It was not unusual for the build manager to put in a solid 8-12 hours to get the build working. The resulting build was often referred to as a ‘clean’ build which created an available release candidate. This process meant you would only have a release candidate to pass to testing on a very low frequency basis, which in turn slowed down the entire application lifecycle process. Builds were always the bottleneck. 
@@ -40,7 +38,7 @@ The process of triggering the ‘build’ is sometimes referred to as the contin
 As CI matured, so did the process around the central theme. CI workflows were created by developers to not only run the build script, but also deploy the new binaries to a development endpoint followed by running automated testing. In addition, code and library management steps were added to the build improving the quality and security of code, and ensuring the usage of the correct transitive dependencies, open source licenses, and security scans were done during the creation of the release candidate.   
 
 
-# Best Practices
+# Best Practices in Action {#heading-bp}
 ## Merging
 In your build step, it is important to understand what code is being pulled from version control to be assembled into a discrete deliverable. For this reason, there should be clear best practices defined for managing branches. 
 
@@ -69,5 +67,5 @@ Build parameters determine how the resulting binaries are created. For example, 
 ## Binary Repository
 The CI build should include the updating of the binaries to an appropriate binary repository. The binary repository should be used to persist and share the binaries to the continuous deployment step of the Continuous Delivery Pipeline. These binaries should be tagged with the corresponding version control ‘tag.’  
 
-# Docker Specific Best Practices
+## Docker Specific Best Practices
 A Multi-stage Docker Build is the process of moving your CI steps into a container build. It is called ‘multi-stage’ because it aggregates all of the needed steps into a Docker Build of the image. For example, in stage one run the compile/link steps to create the artifacts, stage two copy the artifacts to a run-time and destroy stage one. The benefit of considering a Multi-stage Docker Build is to create an airtight environment in which the process is executed. The container holds all objects without the possibility of an external change. Interesting to the Multi-stage process is the ability to move your entire CI Build process into a single container build. Best practices related to each of those steps should still be followed. This option minimizes external updates to the build step making it a best practice candidate. 
