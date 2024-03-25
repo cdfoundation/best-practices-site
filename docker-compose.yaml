@@ -3,11 +3,9 @@ version: "3.3"
 services:
 
   site:
-    image: docsy/cdf-best-practices
-    build:
-      context: .
-    command: server
+    image: klakegg/hugo:ext-alpine
     ports:
       - "1313:1313"
     volumes:
       - .:/src
+    command: ["server", "--bind", "0.0.0.0"]
