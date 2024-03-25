@@ -10,7 +10,7 @@ enableGitInfo = true
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
-# enableMissingTranslationPlaceholders = true
+enableMissingTranslationPlaceholders = true
 
 # Comment out to disable taxonomies in Docsy
 # disableKinds = ["taxonomy", "taxonomyTerm"]
@@ -72,6 +72,15 @@ id = "UA-00000000-0"
     weight = 2
     [languages.es.params]
       description = "Prácticas Recomendadas de CD Foundation para la Entrega Continua"
+  
+  [languages.pt]
+    contentDir = "content/pt"
+    title = "Melhores Práticas"
+    languageName = "Portuguese"
+    # Weight used for sorting.
+    weight = 3
+    [languages.pt.params]
+      description = "Melhores Práticas da CD Foundation para Entrega Contínua"
 
 # Languages sectiopn MUST come before this!
 # Declare and configure Docsy theme.
